@@ -5,14 +5,13 @@ import "./App.css";
 import LoadingPage from "./layouts/components/LoadingPage";
 import { menu } from "./layouts/menu";
 import ProtectedLayout from "./layouts/ProtectedLayout";
-import { useMFE1Store } from "./stores";
+
+
+console.log("ENV", import.meta.env.VITE_APP_STAGE)
 
 const queryClient = new QueryClient();
 
 function App() {
-  const { path } = useMFE1Store();
-
-  console.log("mfe-path", path)
 
   return (
     <QueryClientProvider client={queryClient}>

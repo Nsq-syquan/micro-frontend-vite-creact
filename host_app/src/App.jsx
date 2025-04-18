@@ -4,6 +4,8 @@ import "./App.css";
 import { routers } from "./layouts/Router";
 import LoadingPage from "./layouts/components/LoadingPage";
 
+console.log("ENV", import.meta.env.VITE_APP_STAGE)
+
 function App() {
   return (
     <Suspense fallback={<LoadingPage />}>
