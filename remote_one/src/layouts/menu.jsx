@@ -10,14 +10,14 @@ import About from "../features/About";
 export const menu = [
   {
     label: "Home MFE1",
-    key: "/mfe1",
+    key: "/",
     path: "",
     component: <Home />,
     icon: <LuHouse />,
   },
   {
     label: "About MFE1",
-    key: "/mfe1/about",
+    key: "/about",
     path: "about",
     component: <About />,
     icon: <LuImport />,

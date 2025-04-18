@@ -17,7 +17,7 @@ const ASidebar = () => {
   }, [location]);
 
   const onNavigate = (value) => {
-    navigate(value?.key);
+    navigate(import.meta.env.VITE_APP_STAGE === 'development' ? value?.key : `mfe1${value?.key}`);
   };
   return (
     <Flex
