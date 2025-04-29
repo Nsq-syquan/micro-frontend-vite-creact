@@ -14,13 +14,17 @@ export default defineConfig({
       exposes: {
         './App': './src/App.jsx',
       },
-      shared: {
-        react: { singleton: true, requiredVersion: '^19.0.0' },
-        'react-dom': { singleton: true, requiredVersion: '^19.0.0' },
-        'react-router-dom':  { singleton: true, requiredVersion: '^6.4.0' },
-        zustand:   { singleton: true, eager: true, requiredVersion: '^5.0.3' },
-        '@tanstack/react-query': { singleton: true, eager: true, requiredVersion: '^5.68.0' },
+      remotes: {
+        host: 'http://localhost:3000/assets/remoteEntry.js',
       },
+      shared: ["react", "react-dom", "react-router-dom", "zustand", "@tanstack/react-query"],
+      // shared: {
+      //   react: { singleton: true, requiredVersion: '^19.0.0' },
+      //   'react-dom': { singleton: true, requiredVersion: '^19.0.0' },
+      //   'react-router-dom':  { singleton: true, requiredVersion: '^6.4.0' },
+      //   zustand:   { singleton: true, eager: true, requiredVersion: '^5.0.3' },
+      //   '@tanstack/react-query': { singleton: true, eager: true, requiredVersion: '^5.68.0' },
+      // },
     }),
   ],
 
