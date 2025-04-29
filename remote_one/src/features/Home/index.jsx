@@ -10,7 +10,10 @@ const Home = () => {
     <div className='flex flex-col gap-3 items-center justify-center h-screen'>
       Home MFE1
       <InputField  value={inputValue} onChange={(e)=> setInputValue(e.target.value)} />
-      <ButtonField title="Trở về trang chủ host" onClick={()=> navigate("/")}   />
+      <ButtonField title="Thông báo và trở về trang chủ" onClick={()=> {
+        navigate("/")        
+        alert(inputValue)
+      }}   />
       
     </div>
   )
