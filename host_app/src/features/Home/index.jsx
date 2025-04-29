@@ -1,11 +1,11 @@
 import React from 'react'
-import AButton from '../../components/AButton'
+import { ButtonField } from '../../components/fields'
 
 const Home = () => {
   return (
     <div>
       Home
-      <AButton />
+      <ButtonField />
     </div>
   )
 }

@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-const AButton = React.lazy(() => import('host/AButton'))
+import { ButtonField, InputField } from 'host/fields'
 
 const Home = () => {
   const navigate = useNavigate()
+  const [inputValue, setInputValue] = useState("")
 
   return (
-    <div>
+    <div className='flex flex-col gap-3 items-center justify-center h-screen'>
       Home MFE1
-      <AButton title="Trở về trang chủ host" onClick={()=> navigate("/")}   />
+      <InputField  value={inputValue} onChange={(e)=> setInputValue(e.target.value)} />
+      <ButtonField title="Trở về trang chủ host" onClick={()=> navigate("/")}   />
+      
     </div>
   )
 }

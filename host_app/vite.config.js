@@ -11,7 +11,7 @@ export default defineConfig({
       name: 'host',
       filename: 'remoteEntry.js',
       exposes: {
-        './AButton': './src/components/AButton/index.jsx',
+        './fields': './src/components/fields/index.js',
       },
       remotes: {
         remoteOne: 'http://localhost:4173/assets/remoteEntry.js',
